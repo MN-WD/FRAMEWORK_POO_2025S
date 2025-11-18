@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Controllers;
-use \PDO, \App\Models\BooksRepository, \App\Models\AuthorsRepository;
+use \App\Models\BooksRepository, \App\Models\AuthorsRepository;
 
 abstract class PagesController 
 {
-    public static function homeAction (PDO $conn) {
-        $books = BooksRepository::findAll($conn, 3);
-        $authors = AuthorsRepository::findAll($conn, 3);
+    public static function homeAction () {
+        $books = BooksRepository::findAll(3);
+        $authors = AuthorsRepository::findAll(3);
         // Limite de 3
 
         GLOBAL $content, $title;
