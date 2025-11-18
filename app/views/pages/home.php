@@ -7,3 +7,13 @@
         </li>
     <?php endforeach; ?>
 </ul>
+
+<h2>Recent Authors</h2>
+<ul>
+    <?php foreach ($authors as $author): ?>
+        <li>
+            <?php echo $author->firstname; ?> 
+            <?php echo $author->lastname; ?>
+        </li>
+    <?php endforeach; ?>
+</ul>
