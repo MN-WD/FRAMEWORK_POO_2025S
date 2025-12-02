@@ -10,6 +10,7 @@ abstract class Repository {
     {
         $root_name = basename(str_replace('\\', '/', static::class), "Repository"); // Books
         static::$_table = strtolower($root_name); // books
+        // Attention : Category pas pris en compte ici
         static::$_model = '\App\Models\\' . basename($root_name, 's'); // \App\Models\Book
     }
 

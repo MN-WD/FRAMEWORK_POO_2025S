@@ -10,9 +10,6 @@ abstract class PagesController
         $authors = AuthorsRepository::findAll(3);
         // Limite de 3
 
-        GLOBAL $content, $title;
-        ob_start();
         include '../app/views/pages/home.php';
-        $content = ob_get_clean();
     }
 }
